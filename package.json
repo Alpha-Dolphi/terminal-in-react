@@ -1,6 +1,6 @@
 {
   "name": "terminal-in-react-x",
-  "version": "4.3.4",
+  "version": "4.3.5",
   "description": "A component for making a terminal in React",
   "main": "lib/js/index.js",
   "module": "lib/js/index.js",
@@ -66,8 +66,8 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "build": "npm run build:lib && npm run build:bundle",
-    "build:bundle": "set NODE_ENV=production webpack --config ./webpack/webpack.config.js",
-    "build:lib": "set NODE_ENV=production babel src/js --out-dir lib/js --source-maps"
+    "build:bundle": "cross-env NODE_ENV=production webpack --config ./webpack/webpack.config.js",
+    "build:lib": "cross-env NODE_ENV=production babel src/js --out-dir lib/js --source-maps"
   },
   "jest": {
     "testEnvironment": "node",
